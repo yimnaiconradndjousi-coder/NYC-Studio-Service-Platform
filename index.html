@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NYC studio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="/main.js" defer></script>
+
 </head>
 <body>
     <section class="hero-section">
@@ -27,62 +29,67 @@
         </nav>
 
         <div class="hero-content">
-            <h1>Bring all of your ideas to life with NYC studio</h1>
+            <h1 id="hero-section-title">Bring all of your ideas to life</h1>
             <p>We provide a variety of services to help you bring your ideas to life, from website design to development, mobile apps for both iOS and Android, Logo designing, video editing and much more.</p>
 
-            <div>
+            <div class="hero-buttons">
                 <button class="Start-project-btn">Start a Project</button>
                 <button class="view-project-btn">View Projects</button>
             </div>
 
     </section>
 
+    <!-- #Services Section -->
+
     <section class="service-section">
         <div>
-            <div>
+            <div class="service-section-h">
                 <h1>Our Services</h1>
+                <div class="service-section-p">
+                    <p>Discover the range of services we offer to bring your ideas to life here at NYC studio</p>
+                </div>
             </div>
-            <div>
-                <div>
+            <div class="services-card-container">
                     <div class="service-card">
-                        <h2>Web Design</h2>
-                        <p>We create stunning and responsive websites that captivate your audience and drive results.</p>
+                        <h2>Web Design and development</h2>
+                        <p>We design and create stunning and responsive websites that captivate your audience and drive results.</p>
                     </div>
+
                     <div class="service-card">
                         <h2>Mobile App Development</h2>
                         <p>We build powerful and engaging mobile applications for both iOS and Android platforms.</p>
                     </div>
-                </div>
 
-                <div>
                     <div class="service-card">
-                        <h2>Logo Design</h2>
-                        <p>We create unique and memorable logos that represent your brand identity.</p>
+                        <h2>UI/UX Design</h2>
+                        <p>We create unique and memorable user interfaces and experiences that enhance your product's usability and appeal.</p>
                     </div>
-                    <div class="service-card">
-                        <h2>Video Editing</h2>
-                        <p>We produce high-quality videos that tell your story and engage your audience.</p>
-                    </div>
-                </div>
+            </div>
 
+            <div class="see-more">
+                <button class="see-more-btn">See More</button>
             </div>
         </div>
     </section>
+
     <section class="review-section">
-        <div>
-            <div>
+        <div class="review-info">
+            <div class="summary-review-info">
                 <h2>12+</h2>
                 <p>PROJECTS COMPLETED</p>
             </div>
-            <div>
+
+            <div class="summary-review-info">
                 <h2>98%</h2>
                 <p>HAPPY CLIENTS</p>
             </div>
-            <div>
+
+            <div class="summary-review-info">
                 <h2>2+</h2>
                 <p>YEARS OF EXPERIENCE</p>
             </div>
-            <div>
+
+            <div class="summary-review-info">
                 <h2>24/7</h2>
                 <p>CUSTOMER SUPPORT</p>
             </div>
@@ -93,6 +100,61 @@
 
             </div>
         </div>
+
     </section>
+
+    <!-- #Footer Section -->
+
+    <footer>
+        <div class="footer-content">
+            <div class="conclusion">
+                <h1>NYC Studio.</h1>
+                <p>I build digital experiences that drive growth. From web design to full-scale digital strategy. We're your partner in success</p>
+                <div class="socail-medias">
+                    <img class="icon" src="/icon/facebook.webp" alt="Facebook">
+                    <img class="icon" src="/icon/tiktok.webp" alt="Tiktok">
+                    <img class="icon" src="/icon/linkedin.webp" alt="Linkedin">
+                    <img class="icon" src="/icon/github-white.webp" alt="Github">
+                </div>
+            </div>
+
+            <div class="footer-links-container">
+                <h1>Navigation</h1>
+                <div class="foot-link-div">
+                    <ul>
+                        <li class="foot-nav"><a class="foot-li" href="#hero-section">Home</a></li>
+                        <li class="foot-nav"><a class="foot-li" href="#experience-section">Experience</a></li>
+                        <li class="foot-nav"><a class="foot-li" href="#projects-section">Projects</a></li>
+                        <li class="foot-nav"><a class="foot-li" href="#services-section">Services</a></li>
+                        <li class="foot-nav"><a class="foot-li" href="#about-section">About</a></li>
+                        <li class="foot-nav"><a class="foot-li" href="#contact-section">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-extra">
+                <h1>Contact Information</h1>
+                <div class="contact-information">
+                    <img class="icon" src="/icon/map.webp" alt="Map icon">
+                    <p>NYC Studio, Centre, CM</p>
+                </div>
+
+                <div class="contact-information">
+                    <img class="icon" src="/icon/message.webp" alt="mail icon">
+                    <p>yimnaiconradndjousi@gmail.com</p>
+                </div>
+
+                <div class="contact-information">
+                    <img class="icon" src="/icon/phone.webp" alt="phone icon">
+                    <p>+237 670-68-40-59 </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <p>&copy; 2026 NYC Studio. All rights reserved. Designed with care in cameroon by NYC Studio to the world for the world. Built for results.</p>
+        </div>
+    </footer>
+
 </body>
 </html>

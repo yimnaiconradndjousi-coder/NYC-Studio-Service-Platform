@@ -1,0 +1,38 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(182, 182, 182);
+}
+
+.form-page {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: white;
+    padding: 20px;
+}
+
+textarea {
+    resize: none;
+}
+
+#add-project-btn {
+    font-size: 1rem;
+    padding: 5px;
+    color: white;
+    background-color: black;
+    margin: 10px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+input[type="text"] {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
