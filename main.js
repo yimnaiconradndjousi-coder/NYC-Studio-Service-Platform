@@ -1,22 +1,64 @@
-const serviceContainer = document.querySelector(".services-card-container");
-const trial = document.querySelector(".service-section-h");
+// 1. SELECT ELEMENTS
 const heroTitle = document.getElementById('hero-section-title');
-let text = 'BRING ALL OF YOUR IDEAS TO LIFE';
-let i = 0;
-const speed = 100;
-heroTitle.textContent = '';
+const addServiceTitle = document.getElementById('service-title');
+const addServiceDescription = document.getElementById('service-description');
+const addServiceButton = document.getElementById('add-project-btn');
+const serviceContainer = document.querySelector(".services-card-container");
 
+// --- LOGIC FOR ADMIN PAGE ---
+if (addServiceButton) {
+    addServiceButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Create an object for the new service
+        const newService = {
+            title: addServiceTitle.value,
+            description: addServiceDescription.value
+        };
 
-console.log(heroTitle.getHTML());
-// heroTitle.textContent = text;
+        // Get existing services from localStorage or start an empty array
+        const savedServices = JSON.parse(localStorage.getItem('myServices')) || [];
+        
+        // Add new service to the list and save back to localStorage
+        savedServices.push(newService);
+        localStorage.setItem('myServices', JSON.stringify(savedServices));
 
-function updateHeroTitle() {
-    if (i < text.length) {
-        heroTitle.innerHTML += text.charAt(i);
-        i++;
-
-        setTimeout(updateHeroTitle, speed);
-    }
+        alert("Service added! Check the Home page.");
+        addServiceTitle.value = '';
+        addServiceDescription.value = '';
+    });
 }
 
-window.onload = updateHeroTitle;
+// --- LOGIC FOR HOME PAGE ---
+if (heroTitle) {
+    // Typing Effect Logic
+    const speed = 100;
+    let text = 'BRING ALL OF YOUR IDEAS TO LIFE WITH US';
+    let i = 0;
+    heroTitle.textContent = '';
+
+    function updateHeroTitle() {
+        if (i < text.length) {
+            heroTitle.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(updateHeroTitle, speed);
+        }
+    }
+    updateHeroTitle();
+}
+
+// --- LOAD SAVED SERVICES ON HOME PAGE ---
+if (serviceContainer) {
+    const savedServices = JSON.parse(localStorage.getItem('myServices')) || [];
+    
+    savedServices.forEach(service => {
+        const serviceCard = document.createElement('div');
+        serviceCard.className = 'service-card';
+        serviceCard.innerHTML = `<h2>${service.title}</h2><p>${service.description}</p>`;
+        serviceContainer.appendChild(serviceCard);
+    });
+
+    window.reload = function() {
+        location.reload();
+    }
+}

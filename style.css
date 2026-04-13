@@ -137,15 +137,15 @@ h1{
 .hero-content h1 {
     font-size: 4em;
     font-family: var(--font-title);
-    width: 60%;
-    max-width: 900px;
+    width: 65%;
+    max-width: 1000px;
     color: var(--primary-color);
 }
 
 .hero-content p {
     font-size:1.25rem;
-    width: 95%;
-    max-width: 750px;
+    width: 50%;
+    max-width: 1000px;
     color: var(--primary-color);
     margin-bottom: 20px;
 }
