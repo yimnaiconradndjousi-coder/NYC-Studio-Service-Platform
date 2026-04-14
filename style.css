@@ -46,6 +46,10 @@ h1{
     padding: 0;
 }
 
+.icon {
+    width: 40px;
+}
+
 /* #Hero Section */
 
 .hero-section {
@@ -82,7 +86,7 @@ h1{
 }
 
 .navbar-logo {
-    font-size: 0.8em;
+    font-size: 1.55em;
     cursor: pointer;
     color: var(--primary-color);
 }
@@ -211,13 +215,19 @@ h1{
     text-align: center;
     margin-top: 190px;
     margin-bottom: 50px;
-    gap: 10px;
+    gap: 6px;
     align-items: center;
     
 }
 
+.service-section-h span{
+    font-size: 3rem;
+    text-decoration: underline var(--btn-primary-color) 3px;
+    padding: 2px;
+}
+
 .service-section-p {
-    display: flex;
+    font-size: 1.2rem;
 }
 
 .services-card-container {
@@ -237,12 +247,13 @@ h1{
     flex-direction: column;
     align-items: center;
     padding: 25px;
-    width: 400px;
-    height: 350px;
+    width: 375px;
+    height: 325px;
     background-color: #181A1E;
+    background: linear-gradient(180deg,rgba(24, 26, 30, 1) 65%, rgba(18, 19, 23, 1) 80%);
     border-radius: 15px;
     box-sizing: border-box;
-    box-shadow: 0 0 10px rgba(37, 37, 37, 0.422);
+    /* box-shadow: 0 0 10px rgba(37, 37, 37, 0.422); */
     margin: 10px;
     margin-bottom: 20px;
 }
@@ -276,23 +287,24 @@ h1{
     padding-top: 12px;
     border-radius: 30px;
     border: 1px solid rgba(68, 68, 68, 0.752);
-    background-color: #121317;
+    background-color: var(--btn-primary-color);
 }
 
-
+/* #Review Section */
 
 .review-section {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--bg-color);
-    padding-top: 75px;
+    padding-top: 3%;
 }
 
 .review-info {
     display: flex;
     justify-content: center;
     justify-content: space-around;
-    width: 85%;
+    width: 75%;
     color: white;
     padding: 20px;
 }
@@ -302,4 +314,170 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.summary-review-info p {
+    font-size: 2.3rem;
+}
+
+.summary-review-info span {
+    font-size: 0.95rem;
+}
+
+.summary-review-info h3 {
+    font-size: 1rem;
+}
+
+.customer-review, .rewiews-containers {
+    display: flex;
+    width: 95%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
+
+.rewiews-containers {
+    flex-direction: row;
+    margin: 0;
+}
+
+.customer-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 3%;
+    gap: 6px;
+}
+
+.customer-container p{
+    font-size: 1.2rem;
+    margin-top: 2px;
+}
+
+.customer-container span{
+    font-size: 3rem;
+    text-decoration: underline var(--btn-primary-color) 2px;
+    margin-bottom: 10px;
+}
+
+.user-review {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    background-color: #181A1E;
+    margin: 10px;
+    height: 15vh;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.user-review h3 {
+    margin-bottom: 7px;
+    font-size: 1.5rem;
+    color: ;
+}
+
+.user-review p {
+    margin-bottom: 7px;
+    font-size: 1.25rem;
+}
+
+
+/*#Footer Section*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    padding-top: 25px;
+    padding-bottom: 0;
+    background-color: var(--bg-color);
+    color: white;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.conclusion {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+
+.conclusion p{
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.timeless {
+    font-style: italic;
+    font-weight: 500;
+}
+
+.socail-medias {
+    display: flex;
+    justify-content: space-between;
+    width: 38%;
+    margin-top: 10px;
+}
+
+.footer-links-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links-container h1{
+    font-size: 1.3em;
+}
+
+.foot-link-div ul{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    list-style-type: none;
+}
+
+.foot-nav {
+    padding-bottom: 10px;
+}
+
+.foot-li {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-extra {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-extra h1{
+    font-size: 1.3em;
+}
+
+.contact-information {
+    display: flex;
+    padding-top: 10px;
+    align-items: center;
+}
+
+
+.contact-information p{
+    padding-left: 10px;
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }

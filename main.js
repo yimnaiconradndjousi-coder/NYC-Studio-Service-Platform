@@ -57,8 +57,12 @@ if (serviceContainer) {
         serviceCard.innerHTML = `<h2>${service.title}</h2><p>${service.description}</p>`;
         serviceContainer.appendChild(serviceCard);
     });
+    localStorage.removeItem('myServices');
+    console.log(savedServices[1]);
 
-    window.reload = function() {
-        location.reload();
-    }
+    // for (let i = 0; i < savedServices.length; i++) {
+    //     sav
+    // }
+
+    
 }
