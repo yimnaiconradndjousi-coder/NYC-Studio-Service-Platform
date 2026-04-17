@@ -285,7 +285,7 @@ h1{
     animation: fade-in-bottom linear both;
     animation-timeline: view();
     animation-duration: 10s;
-    animation-range: entry 0% cover 30%;
+    animation-range: entry 25% cover 35%;
 }
 
 .service-card:nth-child(3) {
