@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+    <link rel="stylesheet" href="/styles/admin.css">
+    <script src="/main.js" defer></script>
+</head>
+<body>
+    <!-- <div class="form-page">
+
+    </div> -->
+    <section class="admin-panel">
+        <div id="sidebar">
+            <div class="admin-user">
+                <div><img class="user-image" src="../icons/bot.webp" alt="admin user picture"></div>
+
+                <div class="admin-info">
+                    <h2 class="userName">Yimnai conrad</h2>
+                    <p>Administrator</p>
+                </div>
+            </div>
+
+            <div class="sidebar-nav">
+                <p>Advailable Options</p>
+                <div class="sidebar-nav-container">
+
+                    <div class="sidebar-link">
+                        <img class="sibebar-icon" src="/icons/dashboard.png" alt="dashboard icon">
+                        <p>Dashboard</p>
+                    </div>
+
+                    <div class="sidebar-link">
+                        <img class="sibebar-icon" src="/icons/service.png" alt="service icon">
+                        <p>Services</p>
+                    </div>
+
+                    <div class="sidebar-link">
+                        <img class="sibebar-icon" src="/icons/analytics.png" alt="analitics icon">
+                        <p>Analytics</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="dashboard">
+            <div class="navbar">
+                <div class="navbar-left">
+                    <span>Dashboard</span>
+                </div>
+                <div class="navbar-right">
+                    <img class="nav-icon" src="../icons/notification.png" alt="notification icon">
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-information">
+                    <div class="panel-card">
+                        <div class="panel-info">
+                            <p>Welcome <span id="userName">Yimnai conrad</span></p>
+                            <p>Number of services</p>
+                        </div>
+                        <div>
+                            <p class="numServices">5</p>
+                        </div>
+                    </div>
+
+                    <div class="panel-card">
+                        <div class="panel-info">
+                            <p>Connection</p>
+                            <p>Last time connected</p>
+                        </div>
+                        <div>
+                            <p class="lastTimeConnected">Yesterday</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="addservice-form">
+                    <form action="">
+                        <label for="title">Service Name</label>
+                        <input type="text" name="title" id="service-title" placeholder="Type the name of the E-service here">
+                        <hr>
+                        <label for="description">Service Description</label>
+                        <textarea name="description" id="service-description" placeholder="Enter the E-service description here..."></textarea>
+                        <hr>
+                        <button id="add-project-btn">Add Service</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>

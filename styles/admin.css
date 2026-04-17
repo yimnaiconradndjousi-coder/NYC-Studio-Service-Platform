@@ -1,0 +1,219 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    /* outline: 2px solid red; */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.icon {
+    width: 35px;
+}
+
+.sibebar-icon {
+    width: 25px;
+}
+
+/* Admin */
+
+.admin-panel {
+    display: flex;
+}
+
+/* #Sidebar */
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 25px;
+    padding-top: 65px;
+    gap: 60px;
+    background-color: #181A1E;
+    color: white;
+}
+
+.admin-user {
+    display: flex;
+    gap: 25px;
+}
+
+.user-image {
+    width: 40px;
+    background-color: rgb(21, 198, 183);
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.admin-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-nav p{
+    font-size: 0.82em;
+}
+
+.sidebar-nav ul{
+    list-style: none;
+}
+
+.sidebar-nav-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    gap: 25px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+/* #Dashboard section */
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#dashboard {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    left: 19%;
+    top: 60px;
+    padding: 25px;
+    height: auto;
+    min-height: 84.5vh;
+    background-color: #121317;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    left: 19%;
+    right: 0;
+    top: 0;
+    padding: 18px;
+    align-items: center;
+    background-color: #181A1E;
+    border-left: 1px solid rgb(101, 101, 101);
+}
+
+.navbar-left span{
+    font-size: 1.5rem;
+}
+
+.nav-icon {
+    width: 25px;
+}
+
+.panel-information {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    font-size: 1.2rem;
+    gap: 40px;
+}
+
+.panel-card {
+    display: flex;
+    /* gap: 200px; */
+    justify-content: space-between;
+    width: 80%;
+    background-color: #181A1E;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+#userName {
+    color: rgb(92, 92, 210);
+}
+
+.panel-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.addservice-form {
+    display: flex;
+    width: 47.5%;
+    background-color: #181A1E;
+    margin-left: 10px;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    gap: 10px;
+}
+
+::placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    color: #e3e3e37d;
+}
+
+hr {
+    margin-bottom: 10px;
+}
+
+input[type="text"] { 
+    font-size: 1.25em;
+    padding: 2px;
+    margin-bottom: 3px;
+    background: none;
+    border: none;
+    color: white;
+}
+
+textarea {
+    font-size: 1.5em;
+    resize: none;
+    padding: 2px;
+    margin-bottom: 3px;
+    background: none;
+    border: none;
+    color: white;
+}
+
+input[type="text"]:focus, textarea:focus {
+    border: none;
+    outline: none;
+}
+
+label {
+    font-size: 1.2em;
+    margin-bottom: 12px;
+}
+
+#add-project-btn {
+    font-size: var(--font-size);
+    color: var(--primary-color);
+    padding: 15px; 
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: rgb(30, 100, 220);
+    box-shadow: var(--btn-shadow);
+    transition: all 0.2s ease;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
