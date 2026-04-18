@@ -246,7 +246,7 @@ h1{
     font-size: 1.2rem;
 }
 
-.services-card-container {
+#services-card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -261,7 +261,7 @@ h1{
 @keyframes fade-in-bottom {
   from {
     opacity: 0;
-    transform: translateY(80px);
+    transform: translateY(100px);
   }
   to {
     opacity: 1;
@@ -284,20 +284,20 @@ h1{
     margin-bottom: 20px;
     animation: fade-in-bottom linear both;
     animation-timeline: view();
-    animation-duration: 10s;
-    animation-range: entry 25% cover 35%;
+    animation-duration: 40s;
+    animation-range: entry 30% cover 35%;
 }
 
 .service-card:nth-child(3) {
-  animation-delay: 5s;
+  animation-delay: 8s;
 }
 
 .service-card:nth-child(2) {
-  animation-delay: 10s;
+  animation-delay: 20s;
 }
 
 .service-card:nth-child(1) {
-  animation-delay: 15s;
+  animation-delay: 35s;
 }
 
 .service-card h2 {
@@ -311,6 +311,18 @@ h1{
     font-size: var(--font-size);
     color: rgb(200, 200, 200);
     text-align: center;
+}
+
+.service-card-description {
+    display: flex;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: translateY(80px) ;
+}
+
+.service-card:hover .service-card-description {
+    opacity: 1;
+    transform: translateY(30px);
 }
 
 .see-more {
@@ -423,8 +435,29 @@ h1{
     background-color: #181A1E;
     margin: 10px;
     height: auto;
+    min-height: 26vh;
     padding: 25px;
     border-radius: 12px;
+    animation: fade-in-bottom linear both;
+    animation-timeline: view();
+    animation-duration: 75s;
+    animation-range: entry 70% cover 85%;
+}
+
+.user-review:nth-child(1) {
+  animation-delay: 10s;
+}
+
+.user-review:nth-child(2) {
+  animation-delay: 20s;
+}
+
+.user-review:nth-child(3) {
+  animation-delay: 40s;
+}
+
+.user-review:nth-child(4) {
+  animation-delay: 60s;
 }
 
 .user-review h3 {

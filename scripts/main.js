@@ -1,9 +1,9 @@
-// 1. SELECT ELEMENTS
 const heroTitle = document.getElementById('hero-section-title');
 const addServiceTitle = document.getElementById('service-title');
 const addServiceDescription = document.getElementById('service-description');
 const addServiceButton = document.getElementById('add-project-btn');
 const serviceContainer = document.querySelector(".services-card-container");
+const numReview = document.querySelector(".summary-review-info")
 
 // --- LOGIC FOR ADMIN PAGE ---
 if (addServiceButton) {
@@ -22,7 +22,6 @@ if (addServiceButton) {
         // Add new service to the list and save back to localStorage
         savedServices.push(newService);
         localStorage.setItem('myServices', JSON.stringify(savedServices));
-
         alert("Service added! Check the Home page.");
         addServiceTitle.value = '';
         addServiceDescription.value = '';
@@ -31,7 +30,6 @@ if (addServiceButton) {
 
 // --- LOGIC FOR HOME PAGE ---
 if (heroTitle) {
-    // Typing Effect Logic
     const speed = 100;
     let text = 'BRING ALL OF YOUR IDEAS TO LIFE WITH US';
     let i = 0;
@@ -46,7 +44,7 @@ if (heroTitle) {
     }
     updateHeroTitle();
 }
-
+ 
 // --- LOAD SAVED SERVICES ON HOME PAGE ---
 if (serviceContainer) {
     const savedServices = JSON.parse(localStorage.getItem('myServices')) || [];
@@ -57,12 +55,7 @@ if (serviceContainer) {
         serviceCard.innerHTML = `<h2>${service.title}</h2><p>${service.description}</p>`;
         serviceContainer.appendChild(serviceCard);
     });
-    localStorage.removeItem('myServices');
-    console.log(savedServices[1]);
-
-    // for (let i = 0; i < savedServices.length; i++) {
-    //     sav
-    // }
-
-    
+    // localStorage.removeItem('myServices');
+    console.log(savedServices)
+    // console.log(savedServices[1]);
 }
