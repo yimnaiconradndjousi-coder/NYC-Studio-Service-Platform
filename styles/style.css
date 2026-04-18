@@ -441,7 +441,7 @@ h1{
     animation: fade-in-bottom linear both;
     animation-timeline: view();
     animation-duration: 75s;
-    animation-range: entry 70% cover 85%;
+    animation-range: entry 0% cover 50%;
 }
 
 .user-review:nth-child(1) {
