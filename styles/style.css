@@ -55,6 +55,8 @@ h1{
     width: 40px;
 }
 
+                        /* #INDEX.HTML PAGE */
+
 /* #Hero Section */
 
 .hero-section {
@@ -221,9 +223,14 @@ h1{
     background-color: #121317;
     box-sizing: border-box;
     color: white;
+    width: 100%;
 }
 
-.service-section-h {
+.service-container {
+    width: 100%;
+}
+
+.service-section-h, .service-section-page-h {
     display: flex;
     flex-direction: column;
     font-size: 1.25em;
@@ -234,10 +241,9 @@ h1{
     margin-bottom: 50px;
     gap: 6px;
     align-items: center;
-    
 }
 
-.service-section-h span{
+.service-section-h span, .service-section-page-h span {
     font-size: 3rem;
     padding: 2px;
 }
@@ -247,15 +253,13 @@ h1{
 }
 
 #services-card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    column-gap: 50px;
+    row-gap: 50px;
     box-sizing: border-box;
     text-align: center;
-    width: 95vw;
-    justify-content: space-between;
-    justify-content: center;
+    width: 100%;
 }
 
 @keyframes fade-in-bottom {
@@ -274,13 +278,11 @@ h1{
     flex-direction: column;
     align-items: center;
     padding: 25px;
-    width: 375px;
-    height: 325px;
+    height: 250px;
     background-color: #181A1E;
     background: linear-gradient(180deg,rgba(24, 26, 30, 1) 65%, rgba(18, 19, 23, 1) 80%);
     border-radius: 15px;
     box-sizing: border-box;
-    margin: 10px;
     margin-bottom: 20px;
     animation: fade-in-bottom linear both;
     animation-timeline: view();
@@ -476,6 +478,13 @@ h1{
     padding: 15px;
     font-size: 1.25rem;
 }
+
+                        /* #SERVICE.HTML PAGES */
+
+.service-section-page-h {
+    margin-top: 100px;
+}
+
 
 
 /*#Footer Section*/

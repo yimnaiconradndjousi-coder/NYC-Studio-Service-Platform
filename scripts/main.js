@@ -2,7 +2,7 @@ const heroTitle = document.getElementById('hero-section-title');
 const addServiceTitle = document.getElementById('service-title');
 const addServiceDescription = document.getElementById('service-description');
 const addServiceButton = document.getElementById('add-project-btn');
-const serviceContainer = document.querySelector(".services-card-container");
+const serviceContainer = document.querySelector("#services-card-container");
 const numReview = document.querySelector(".summary-review-info")
 
 // --- LOGIC FOR ADMIN PAGE ---
