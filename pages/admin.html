@@ -11,7 +11,7 @@
     <!-- <div class="form-page">
 
     </div> -->
-    <section class="admin-panel">
+    <section id="admin-panel">
         <div id="sidebar">
             <div class="admin-user">
                 <div><img class="user-image" src="../icons/bot.webp" alt="admin user picture"></div>
@@ -62,7 +62,7 @@
                             <p>Number of services</p>
                         </div>
                         <div>
-                            <p class="numServices">5</p>
+                            <p id="numServices">5</p>
                         </div>
                     </div>
 
@@ -71,13 +71,16 @@
                             <p>Connection</p>
                             <p>Last time connected</p>
                         </div>
+
                         <div>
-                            <p class="lastTimeConnected">Yesterday</p>
+                            <p id="last-time-connected">Yesterday</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="addservice-form">
+                    <img class="close-btn"src="../icons/close-white.png" alt="close icon">
+
                     <form action="">
                         <label for="title">Service Name</label>
                         <input type="text" name="title" id="service-title" placeholder="Type the name of the E-service here">
@@ -88,6 +91,66 @@
                         <button id="add-project-btn">Add Service</button>
                     </form>
                 </div>
+
+                <div id="admin-table">
+                    <table>
+                        <caption>
+                            <div class="caption-container">
+                                <div class="caption-title">Services</div>
+                                <div>
+                                    <button id="add-service-btn">
+                                        <div class="add-service-btn-container">
+                                            <img class="plus-icon" src="../icons/plus.png" alt=""> 
+                                            <p>Add Service</p>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="service-table">
+                            <!-- <tr>
+                                <td>UI/UX design</td>
+                                <td>we create unique digital experiences that turn your visitors to client.</td>
+                                <td>
+                                    <div class="table-buttons">
+                                        <button class="modify-btn"><img src="../icons/edit.png" alt="Edit"></button>
+                                        <button class="delete-btn"><img src="../icons/delete.png" alt="Delete"></button>
+                                    </div>
+                                </td>
+                            </tr> -->
+
+                        </tbody>
+
+                    </table>
+                </div>
+
+                <div id="modify-form-container">
+                    <img class="close-btn"src="../icons/close-white.png" alt="">
+
+                    <form id="modification-form" action="">
+
+                        <label for="title">Service Name</label>
+                        <textarea name="title" id="modify-service-title" placeholder="Type the name of the E-service here"></textarea>
+                        <hr>
+                        <label for="description">Service Description</label>
+                        <textarea name="description" id="modify-service-description" placeholder="Enter the E-service description here..."></textarea>
+                        <hr>
+                        <div class="modification-buttons">
+                            <button id="apply-changes-btn">Apply</button>
+                            <button id="discard-changes-btn">Discard</button>
+                        </div>
+
+                    </form>
+                </div>
+
             </div>
         </div>
 

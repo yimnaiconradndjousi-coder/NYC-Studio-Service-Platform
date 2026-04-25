@@ -217,17 +217,17 @@ h1{
 .service-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
-    justify-content: center;
+    justify-content: center; 
     background-color: #121317;
     box-sizing: border-box;
     color: white;
     width: 100%;
+    padding: 75px;
 }
 
 .service-container {
-    width: 100%;
+    width: 100;
 }
 
 .service-section-h, .service-section-page-h {
@@ -254,18 +254,19 @@ h1{
 
 #services-card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    column-gap: 50px;
-    row-gap: 50px;
-    box-sizing: border-box;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    column-gap: 25px;
+    row-gap: 25px;
     text-align: center;
     width: 100%;
+    margin-top: 75px;
+    padding: 35px;
 }
 
 @keyframes fade-in-bottom {
   from {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(50px);
   }
   to {
     opacity: 1;
@@ -278,28 +279,39 @@ h1{
     flex-direction: column;
     align-items: center;
     padding: 25px;
-    height: 250px;
+    height: 350px;
     background-color: #181A1E;
-    background: linear-gradient(180deg,rgba(24, 26, 30, 1) 65%, rgba(18, 19, 23, 1) 80%);
+    background: linear-gradient(180deg,rgba(24, 26, 30, 1) 65%, rgba(18, 19, 23, 1) 90%);
     border-radius: 15px;
     box-sizing: border-box;
-    margin-bottom: 20px;
     animation: fade-in-bottom linear both;
     animation-timeline: view();
     animation-duration: 40s;
-    animation-range: entry 30% cover 35%;
+    animation-range: entry 25% cover 25%;
+}
+
+.service-card:nth-child(6) {
+  animation-delay: 50s;
+}
+
+.service-card:nth-child(5) {
+  animation-delay: 40s;
+}
+
+.service-card:nth-child(4) {
+  animation-delay: 30s;
 }
 
 .service-card:nth-child(3) {
-  animation-delay: 8s;
-}
-
-.service-card:nth-child(2) {
   animation-delay: 20s;
 }
 
+.service-card:nth-child(2) {
+  animation-delay: 10s;
+}
+
 .service-card:nth-child(1) {
-  animation-delay: 35s;
+  animation-delay: 0s;
 }
 
 .service-card h2 {

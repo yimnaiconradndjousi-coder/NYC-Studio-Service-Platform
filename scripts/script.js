@@ -28,7 +28,7 @@ button.addEventListener('click', function(e) {
         passwordError.textContent = 'Password must be at least 8 characters.';
         passwordError.style.color = 'red';
         passwordError.style.fontSize = '14px';
-        passwordError.style.margin = '5px'
+        passwordError.style.margin = '5px';
 
         setTimeout( function() {
                 passwordError.textContent = '';
