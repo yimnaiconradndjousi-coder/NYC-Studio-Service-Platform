@@ -1,6 +1,6 @@
 const heroTitle = document.getElementById('hero-section-title');
 const serviceContainer = document.querySelector("#services-card-container");
-const numReview = document.querySelector(".summary-review-info")
+const numReview = document.querySelector(".summary-review-info");
 
 // Login Variables
 const loginForm = document.querySelector(".login-form");
@@ -14,8 +14,8 @@ const hr1 = document.querySelector('.hr1');
 const date = new Date();
 
 // #Dashboard Variables
-const adminPage = document.getElementById("admin-panel")
-const adminUserName = document.getElementById("userName")
+const adminPage = document.getElementById("admin-panel");
+const adminUserName = document.querySelectorAll(".userName");
 const addServiceTitle = document.getElementById('service-title');
 const addServiceDescription = document.getElementById('service-description');
 const adminTable = document.getElementById("admin-table");
@@ -34,7 +34,6 @@ const discardChangeBtn = document.getElementById("discard-changes-btn");
 const addServiceBtn = document.getElementById("add-service-btn");
 
                     // --- ADMIN PAGE LOGIC---
-
 
 if (adminPage) {
 
@@ -63,6 +62,30 @@ if (adminPage) {
 
     // Analytics
     if (adminPage) {
+
+        // Admin Name (Analytics Logic)
+        const adminUser = JSON.parse(localStorage.getItem('AdminUser')) || [];
+        let lenAdminUser = adminUser.length;
+        
+
+        // console.log(adminUser[0]);
+        adminUser.forEach((user, index) => {
+            adminUserName.forEach(adminname => {
+                adminname.textContent = "yo buddy";
+                    if (lenAdminUser == 1) {
+                        adminname.textContent = adminUser[0];
+                    };
+                // if (index > -1 && lenAdminUser > 2) {
+
+                //     if (lenAdminUser == 1) {
+                //         adminname.textContent = adminUser[0];
+                //     };
+                //     console.log(`current user is: ${user}`);
+
+                //     adminname.textContent = adminUser[0];
+                // };
+            }) 
+        });
 
         // Number Of Service Added (Analytics Logic)
         const savedServices = JSON.parse(localStorage.getItem('myServices')) || [];
@@ -232,6 +255,13 @@ if (loginForm) {
         const password = passwordInput.value;
         console.log(`user name: ${userName}`);
         console.log(`password: ${password}`);
+
+        const admin = userName;
+        const adminUser = JSON.parse(localStorage.getItem('AdminUser')) || [];
+        adminUser.push(admin);
+
+        console.log(adminUser[0]);
+        localStorage.setItem('AdminUser', JSON.stringify(adminUser));
 
         if (password.length < 8) {
             passwordError.textContent = 'Password must be at least 8 characters.';

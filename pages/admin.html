@@ -17,7 +17,7 @@
                 <div><img class="user-image" src="../icons/bot.webp" alt="admin user picture"></div>
 
                 <div class="admin-info">
-                    <h2 class="userName">Yimnai conrad</h2>
+                    <span id="sidebar-username" class="userName">Yimnai conrad</span>
                     <p>Administrator</p>
                 </div>
             </div>
@@ -58,7 +58,11 @@
                 <div class="panel-information">
                     <div class="panel-card">
                         <div class="panel-info">
-                            <p>Welcome <span id="userName">Yimnai conrad</span></p>
+                            <div class="welcome-msg">
+                                <p>Welcome</p>
+                                <span class="userName">Yimnai conrad</span>
+                            </div>
+                            
                             <p>Number of services</p>
                         </div>
                         <div>
@@ -92,45 +96,47 @@
                     </form>
                 </div>
 
-                <div id="admin-table">
-                    <table>
-                        <caption>
-                            <div class="caption-container">
-                                <div class="caption-title">Services</div>
-                                <div>
-                                    <button id="add-service-btn">
-                                        <div class="add-service-btn-container">
-                                            <img class="plus-icon" src="../icons/plus.png" alt=""> 
-                                            <p>Add Service</p>
-                                        </div>
-                                    </button>
-                                </div>
-                            </div>
-                        </caption>
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Description</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-
-                        <tbody id="service-table">
-                            <!-- <tr>
-                                <td>UI/UX design</td>
-                                <td>we create unique digital experiences that turn your visitors to client.</td>
-                                <td>
-                                    <div class="table-buttons">
-                                        <button class="modify-btn"><img src="../icons/edit.png" alt="Edit"></button>
-                                        <button class="delete-btn"><img src="../icons/delete.png" alt="Delete"></button>
+                <div class="table-div">
+                    <div id="admin-table">
+                        <table>
+                            <caption>
+                                <div class="caption-container">
+                                    <div class="caption-title">Services</div>
+                                    <div>
+                                        <button id="add-service-btn">
+                                            <div class="add-service-btn-container">
+                                                <img class="plus-icon" src="../icons/plus.png" alt=""> 
+                                                <p>Add Service</p>
+                                            </div>
+                                        </button>
                                     </div>
-                                </td>
-                            </tr> -->
+                                </div>
+                            </caption>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
 
-                        </tbody>
+                            <tbody id="service-table">
+                                <!-- <tr>
+                                    <td>UI/UX design</td>
+                                    <td>we create unique digital experiences that turn your visitors to client.</td>
+                                    <td>
+                                        <div class="table-buttons">
+                                            <button class="modify-btn"><img src="../icons/edit.png" alt="Edit"></button>
+                                            <button class="delete-btn"><img src="../icons/delete.png" alt="Delete"></button>
+                                        </div>
+                                    </td>
+                                </tr> -->
+                            </tbody>
 
-                    </table>
+                        </table>
+                    </div>     
                 </div>
+
 
                 <div id="modify-form-container">
                     <img class="close-btn"src="../icons/close-white.png" alt="">

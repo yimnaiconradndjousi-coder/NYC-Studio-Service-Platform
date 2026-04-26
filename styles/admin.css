@@ -31,11 +31,12 @@ body {
     display: flex;
     flex-direction: column;
     position: fixed;
+    width: 100%;
     top: 0;
     bottom: 0;
     padding: 25px;
     padding-top: 65px;
-    gap: 60px;
+    gap: 55px;
     background-color: #181A1E;
     color: white;
 }
@@ -55,6 +56,7 @@ body {
 .admin-info {
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
 .sidebar-nav p{
@@ -69,15 +71,25 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 25px;
-    gap: 25px;
+    gap: 15px;
 }
+
+/* * {
+    outline: 2px solid red;
+} */
 
 .sidebar-link {
     display: flex;
     align-items: center;
-    gap: 5px;
+    padding: 10px;
+    margin: 0;
     font-size: 1.2em;
     font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.sidebar-link:hover {
+    background-color: rgba(30, 100, 220, 0.5);
 }
 
 /* #Dashboard Section */
@@ -86,6 +98,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    justify-content: center;
 }
 
 #dashboard {
@@ -121,6 +134,7 @@ body {
 
 .nav-icon {
     width: 25px;
+    cursor: pointer;
 }
 
 .panel-information {
@@ -138,16 +152,28 @@ body {
     background-color: #181A1E;
     padding: 30px;
     border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px rgba(10, 10, 10, 0.575);
 }
 
-#userName {
-    color: rgb(92, 92, 210);
+.userName {
+    color: rgb(37, 150, 255);
+}
+
+#sidebar-username {
+    font-size: 1.25em;
 }
 
 .panel-info {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.welcome-msg {
+    display: flex;
+    gap: 10px;
+    font-size: 1.15em;
 }
 
 /* #Add Service Form */
@@ -219,10 +245,27 @@ label {
 
 /* #Service Table Display */
 
+/* * {
+    outline: 2px solid red;
+} */
+
 #admin-table {
     display: flex;
     width: 98%;
     padding: 12px;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px rgba(10, 10, 10, 0.734);
+    border-radius: 12px;
+    background-color: #181A1E;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 table {
@@ -285,7 +328,7 @@ th, td {
 }
 
 th, td {
-  border: 1px solid #282828;
+  border: 2px solid #151414;
   padding: 14px;
   text-align: left;
 }
@@ -298,7 +341,7 @@ thead th {
 }
 
 tbody tr:nth-child(even) {
-  background-color:#181A1E;
+  background-color:#121317;
 }
 
 tbody tr {
@@ -306,7 +349,7 @@ tbody tr {
 }
 
 tbody tr:hover {
-  background-color: rgba(30, 100, 220, 0.229);
+  background-color: rgba(30, 100, 220, 0.5);
 }
 
 .table-buttons {
@@ -351,10 +394,6 @@ tbody tr:hover {
 }
 
 /* #Modification Form */
-
-/* *{
-    outline: 2px solid red;
-} */
 
 #modify-form-container {
     width: 32%;
