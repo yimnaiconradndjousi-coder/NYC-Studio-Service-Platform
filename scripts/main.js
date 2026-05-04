@@ -71,19 +71,16 @@ if (adminPage) {
         // console.log(adminUser[0]);
         adminUser.forEach((user, index) => {
             adminUserName.forEach(adminname => {
+                let lastindex = lenAdminUser - 1;
+
                 adminname.textContent = "yo buddy";
-                    if (lenAdminUser == 1) {
-                        adminname.textContent = adminUser[0];
-                    };
-                // if (index > -1 && lenAdminUser > 2) {
+                if (lenAdminUser == 1) {
+                    adminname.textContent = adminUser[0];
+                ``};
 
-                //     if (lenAdminUser == 1) {
-                //         adminname.textContent = adminUser[0];
-                //     };
-                //     console.log(`current user is: ${user}`);
-
-                //     adminname.textContent = adminUser[0];
-                // };
+                if (index > -1 && lenAdminUser > 2) {
+                    adminname.textContent = adminUser[lastindex];
+                };
             }) 
         });
 

@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NYC studio</title>
     <link rel="stylesheet" href="../styles/style.css">
-    <link rel="shortcut icon" href="/icons/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/contact.css">
+    <link rel="shortcut icon" href="../favicon.svg" type="image/x-icon">
     <script src="../scripts/main.js" defer></script>
 </head>
 <body>
+
+    <!-- # Home Section  -->
     <section class="hero-section">
         <nav class="navbar">
             <div class="navbar-logo">
@@ -27,19 +30,75 @@
                 <a href="/login.html"><button class="signup-btn">Sign Up</button></a>
             </div>
         </nav>
+
+        <div class="hero-content">
+            <div class="heading-content">
+                <div class="heading-content-h">
+                    <h1>Ready to Grow</h1>
+                </div>
+                <div class="heading-content-p">Increase the reach for your products, and services. Be the first to go online with your business in a world which is becoming intertwine with Technology. With us conquer the E-commerce space in your sector.</div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- #Contact Section -->
+     
+    <section id="contact-section">
+
+        <div class="Contact-info">
+            <p class="contact-title">GET IN TOUCH</p>
+            <h2>Let's build something <span class="timeless">timeless</span></h2>
+
+            <h3 class="info-title">LOCATION:</h3>
+            <p class="info-contact">Yaounde, Cameroon</p>
+
+            <h3 class="info-title">ELECTRONIC MAIL:</h3>
+            <p class="info-contact">yimnaiconradndjousi@gmail.com</p>
+
+            <h3 class="info-title">SOCIAL MEDIAS:</h3>
+            <div class="info-social-medias">
+                <img class="icon" src="../icons/whatsapp.png" alt="Whatsapp">
+                <img class="icon" src="../icons/facebook.png" alt="Facebook">
+                <img class="icon" src="../icons/github-white.webp" alt="Github">
+                <img class="icon" src="../icons/linkedin.png" alt="Linkedin">
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <form action="https://formspree.io/f/mlgovole" method="POST">
+                    <div class="input-fields">
+                    <label for="username">FULL NAME</label>
+                    <input type="text" name="username" id="userName" placeholder="e.g John Doe" required>
+                    <hr class="seperator">
+
+                    <label for="email">EMAIL ADDRESS</label>
+                    <input type="email" name="email" id="email" placeholder="johndoe@gmail.com" required>
+                    <hr class="seperator">
+
+                    <label for="message">MESSAGE</label>
+                    <textarea name="message" id="message" placeholder="Type your message here..."></textarea>
+                    <hr class="seperator">
+                </div>
+
+                <div class="form-btn">
+                    <button type="submit" id="submit-btn">SEND MESSAGE</button>
+                </div>
+            </form>
+        </div>
     </section>
 
     <!-- #Footer Section -->
-
     <footer>
         <div class="footer-content">
             <div class="conclusion">
                 <p>Lets build unique and beautiful digital experiences.</p>
                 <div class="socail-medias">
-                    <img class="icon" src="./icons/facebook.webp" alt="Facebook">
-                    <img class="icon" src="./icons/tiktok.webp" alt="Tiktok">
-                    <img class="icon" src="./icons/linkedin.webp" alt="Linkedin">
-                    <img class="icon" src="./icons/github-white.webp" alt="Github">
+                    <img class="icon" src="../icons/facebook.png" alt="Facebook">
+                    <img class="icon" src="../icons/whatsapp.png" alt="Whatsapp">
+                    <img class="icon" src="../icons/linkedin.webp" alt="Linkedin">
+                    <img class="icon" src="../icons/github-white.webp" alt="Github">
                 </div>
             </div>
 
@@ -59,17 +118,17 @@
             <div class="footer-extra">
                 <h1>Contact Information</h1>
                 <div class="contact-information">
-                    <img class="icon" src="./icons/map.webp" alt="Map icon">
+                    <img src="../icons/map.webp" alt="Map icon">
                     <p>NYC Studio, Centre, CM</p>
                 </div>
 
                 <div class="contact-information">
-                    <img class="icon" src="./icons/message.webp" alt="mail icon">
+                    <img src="../icons/message.webp" alt="mail icon">
                     <p>yimnaiconradndjousi@gmail.com</p>
                 </div>
 
                 <div class="contact-information">
-                    <img class="icon" src="./icons/phone.webp" alt="phone icon">
+                    <img src="../icons/phone.webp" alt="phone icon">
                     <p>+237 670-68-40-59 </p>
                 </div>
             </div>

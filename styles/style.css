@@ -52,7 +52,7 @@ h1{
 }
 
 .icon {
-    width: 40px;
+    width: 45px;
 }
 
                         /* #INDEX.HTML PAGE */
@@ -110,6 +110,14 @@ h1{
 
 .navbar-link ul li {
     cursor: pointer;
+}
+
+.navbar-link ul li a {
+    transition: all 0.2s ease;
+}
+
+.navbar-link ul li a:hover {
+    color: rgb(30, 115, 220);
 }
 
 .navbar-call-to-action {
@@ -380,7 +388,7 @@ h1{
     display: flex;
     justify-content: center;
     justify-content: space-around;
-    width: 75%;
+    width: 100%;
     color: white;
     padding: 20px;
     margin-top: 4%;
@@ -426,7 +434,7 @@ h1{
 .customer-container {
     display: flex;
     flex-direction: column;
-    width: 65%;
+    width: 55%;
     text-align: center;
     margin-bottom: 4%;
     gap: 6px;
@@ -477,7 +485,7 @@ h1{
 .user-review h3 {
     margin-bottom: 7px;
     font-size: 1.35rem;
-    color: rgb(191, 192, 193);
+    color: rgb(30, 115, 220);
 }
 
 .user-review p {
@@ -526,7 +534,7 @@ footer {
 }
 
 .conclusion p{
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     margin-bottom: 5px;
     font-weight: 600;
 }
@@ -561,15 +569,33 @@ footer {
     flex-direction: column;
     padding: 10px;
     list-style-type: none;
+    transition: all 0.3s ease;
+}
+
+.foot-link-div ul div{
+    transition: all 0.3s ease;
+}
+
+.foot-link-div ul div:hover{
+    transform: translateX(15px);
 }
 
 .foot-nav {
     padding-bottom: 10px;
 }
 
-.foot-li {
+.foot-li, .foot-nav {
     color: white;
     text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.foot-li:hover {
+    color: rgb(30, 115, 220);
+}
+
+.foot-nav:hover {
+    list-style: disc;
 }
 
 .footer-extra {
@@ -587,6 +613,9 @@ footer {
     align-items: center;
 }
 
+.contact-information img{
+    width: 35px;
+}
 
 .contact-information p{
     padding-left: 10px;

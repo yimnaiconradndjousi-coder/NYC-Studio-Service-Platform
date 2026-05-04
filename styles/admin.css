@@ -113,6 +113,7 @@ body {
     min-height: 84.5vh;
     background-color: #121317;
     color: white;
+    background-color: #181A1E;
 }
 
 .navbar {
@@ -299,7 +300,7 @@ caption {
     align-items: center;
     gap: 6px;
     padding: 1px;
-    background-color: rgb(30, 100, 220);
+    background-color: transparent;
 
 }
 
