@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="./styles/login.css">
-    <script src="./scripts/main.js" defer></script>
+    <link rel="stylesheet" href="./styles/signup.css">
+    <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon">
+    <script src="./scripts/Auth0.js" defer></script>
 
 </head>
 <body>
@@ -14,17 +15,17 @@
             <div class="form-title">
                 <h1>Login</h1>
             </div>
-            
+
             <div class="input-field">
-                <label for="username">Username</label>
+                <label for="email">E-mail</label>
                 <div class="input-and-logo">
-                    <img src="./icons/user icon.png" class="input-icon" alt="user logo">
-                    <input type="text" name="username" id="username" placeholder="Type your username" autocomplete="username">
+                    <img src="./icons/email2.png" class="input-icon" alt="mail icon">
+                    <input type="email" name="email" id="email" placeholder="Type your email adress" autocomplete="username" required>
                 </div>
-                <hr class="hr1">
+                <hr class="hr">
             </div>
-            <p class="username-error"></p>
-            
+
+            <p id="email-error"></p>
 
             <div class="input-field">
                 <label for="password">Password</label>
@@ -34,25 +35,25 @@
                     <img src="./icons/hide-password.png" id="show-or-hide-password" alt="eye icon">
                 </div>
 
-                <hr class="hr2">
+                <hr class="hr">
             </div>
             <p id="password-error"></p>
             
 
             <a href="#" class="forgot-password-link">Forgot password?</a>
 
-            <button class="login-btn">LOGIN</button>
+            <button id="login-btn">LOGIN</button>
 
-            <p>Or Sign Up Using</p>
+            <p>Or Login Using</p>
             <div class="sign-up">
-                <div class="signup-option">
+                <div class="login-option">
                     <a href="#"><img class="socail-media-icons" src="./icons/facebook.webp" alt="facebook logo"></a>
                     <a href="#"><img class="socail-media-icons" src="./icons/linkedin.png" alt="linkedin logo"></a>
                     <a href="#"><img class="socail-media-icons" src="./icons/google.png" alt="google logo"></a>
                 </div>
             </div>
 
-            <p>Or Sign Up Using</p>
+            <p>Create new account</p>
             <a href="#" class="external-link">SIGN UP</a>
 
         </form>

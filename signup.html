@@ -3,45 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="./styles/login.css">
-    <script src="./scripts/main.js" defer></script>
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="./styles/signup.css">
+    <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon">
+    <script src="./scripts/Auth0.js" defer></script>
 
 </head>
 <body>
-    <div class="login-form">
+    <div class="signup-form">
         <form action="">
             <div class="form-title">
-                <h1>Login</h1>
+                <h1>Sign up</h1>
             </div>
             
             <div class="input-field">
                 <label for="username">Username</label>
                 <div class="input-and-logo">
-                    <img src="./icons/user icon.png" class="input-icon" alt="user logo">
-                    <input type="text" name="username" id="username" placeholder="Type your username" autocomplete="username">
+                    <img src="./icons/user icon.png" class="input-icon" alt="user icon">
+                    <input type="text" name="username" id="username" placeholder="Type your username" autocomplete="username" required>
                 </div>
-                <hr class="hr1">
+
+                <hr class="hr">
             </div>
-            <p class="username-error"></p>
+            <p id="username-error"></p>
             
+            <div class="input-field">
+                <label for="email">E-mail</label>
+                <div class="input-and-logo">
+                    <img src="./icons/email2.png" class="input-icon" alt="mail icon">
+                    <input type="email" name="email" id="email" placeholder="Type your email adress" autocomplete="username" required>
+                </div>
+
+                <hr class="hr">
+            </div>
+            <p id="email-error"></p>
 
             <div class="input-field">
                 <label for="password">Password</label>
                 <div class="input-and-logo">
                     <img src="./icons/lock icon.png" class="input-icon" alt="lock icon">
-                    <input type="password" name="password" id="password" placeholder="Type your password" autocomplete="current-password">
+                    <input type="password" name="password" id="password" placeholder="Type your password" autocomplete="current-password" required>
                     <img src="./icons/hide-password.png" id="show-or-hide-password" alt="eye icon">
                 </div>
 
-                <hr class="hr2">
+                <hr class="hr">
             </div>
             <p id="password-error"></p>
-            
 
-            <a href="#" class="forgot-password-link">Forgot password?</a>
-
-            <button class="login-btn">LOGIN</button>
+            <button id="signup-btn">Sign Up</button>
 
             <p>Or Sign Up Using</p>
             <div class="sign-up">
@@ -52,8 +61,8 @@
                 </div>
             </div>
 
-            <p>Or Sign Up Using</p>
-            <a href="#" class="external-link">SIGN UP</a>
+            <p>Or Already have and account</p>
+            <a href="./login.html" class="external-link">Login</a>
 
         </form>
 

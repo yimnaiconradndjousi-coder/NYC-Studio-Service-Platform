@@ -7,6 +7,11 @@
     border-radius: 15px;
 }
 
+.hero-content p{
+    width: 75%;
+    line-height: 25px;
+}
+
 /* #Review Section */
 
 .review-section {

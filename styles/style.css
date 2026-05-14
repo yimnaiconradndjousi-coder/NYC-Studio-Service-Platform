@@ -82,6 +82,7 @@ h1{
     height: 25px;
     z-index: 1000;
     align-items: center;
+    justify-content: center;
     justify-content: space-between;
     padding: 20px;
     background: transparent;

@@ -9,6 +9,8 @@
 
 *{
     /* outline: 2px solid red; */
+    margin: 0;
+    padding: 0;
 }
 
 p {
@@ -27,12 +29,8 @@ hr {
     transition: background-color 0.5s ease;
 }
 
-.hr1{
-    margin-bottom: 25px;
-}
-
-.hr2{
-    margin-bottom: 10px;
+.hr{
+    margin-bottom: 20px;
 }
 
 body {
@@ -70,19 +68,16 @@ body {
     font-family: var(--text-font);
     background-color: #181A1E;
     justify-content: center;
+    align-items: center;
     box-sizing: border-box;
-    min-height: 100vh;
-    border-radius: 10px;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    min-height: 95vh;
     margin: 0 auto;
+    border-radius: 10px;
+    padding:500px;
+    width: 25%;
 }
 
-.username-error {
-    margin: 0;
-}
-
-#password-error {
+#username-error, #email-error, #password-error {
     margin: 0;
 }
 
@@ -112,7 +107,7 @@ input:focus {
     background-color: transparent;
 }
 
-input[type="text"],  input[type="password"]{
+input[type="text"],  input[type="password"], input[type="email"]{
     color: white;
     border:none;
     background-color: transparent;
@@ -148,13 +143,23 @@ input:user-invalid{
     height: 2px;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #181A1E inset !important;
+    -webkit-text-fill-color: #ffffff !important; 
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+
 .forgot-password-link {
     text-align: right;
     text-decoration: none;
     color:var(--text-color)   
 }
 
-.login-btn {
+#login-btn {
     margin-top: 10%;
     text-align: center;
     padding: 7%;
