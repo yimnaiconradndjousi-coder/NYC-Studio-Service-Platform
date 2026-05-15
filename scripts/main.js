@@ -11,22 +11,32 @@ const adminPage = document.getElementById("admin-panel");
 const adminUserName = document.querySelectorAll(".userName");
 const addServiceTitle = document.getElementById('service-title');
 const addServiceDescription = document.getElementById('service-description');
-const adminTable = document.getElementById("admin-table");
+
+const tableContainer = document.getElementById("table-container");
 const serviceTable = document.getElementById("service-table");
 const modifyForm = document.getElementById("modify-form-container");
 const addForm = document.querySelector('.addservice-form');
 const lastTimeConnected = document.getElementById("last-time-connected");
-const userPanel = document.getElementById('user-panel');
+
+// Sidebar Links 
+const dashboardSideBar = document.getElementById('dashboard-sidebar');
+const userSideBar = document.getElementById('user-sidebar');
+
+// Panel
+const dashboardPanel = document.getElementById('dashboard-panel');
+const userPanel = document.getElementById('user-table');
+
 let numServices = document.getElementById("numServices");
 let services = 0;
 
 // Button
-const addServiceButton = document.getElementById('add-project-btn');
+const addServiceButton = document.getElementById('add-btn');
 const closeButton = document.querySelectorAll(".close-btn");
 const applyChangeBtn = document.getElementById("apply-changes-btn");
 const discardChangeBtn = document.getElementById("discard-changes-btn");
 const addServiceBtn = document.getElementById("add-service-btn");
 
+const addUserButton = document.getElementById('add-user-btn');
 // Login and Signup Variables
 
 
@@ -68,8 +78,6 @@ if (adminPage) {
         const adminUser = JSON.parse(localStorage.getItem('AdminUser')) || [];
         let lenAdminUser = adminUser.length;
         
-
-        // console.log(adminUser[0]);
         adminUser.forEach((user, index) => {
             adminUserName.forEach(adminname => {
                 let lastindex = lenAdminUser - 1;
@@ -95,7 +103,6 @@ if (adminPage) {
         numServices.textContent = `${services}`;
 
         // Last connection time logic
-
         const savedConnectedTime = JSON.parse(localStorage.getItem('LastConnectionTime')) || [];
 
         let lenOfTimeArray = savedConnectedTime.length;
@@ -115,7 +122,7 @@ if (adminPage) {
     }
 
     // Admin Service Table Logic
-    if (adminTable) {
+    if (tableContainer) {
         const savedServices = JSON.parse(localStorage.getItem('myServices')) || [];
         
         savedServices.forEach(service => {
@@ -189,16 +196,6 @@ if (adminPage) {
             })     
         }
 
-        // modal form close button
-        // closeButton.forEach(button => {
-        //     button.addEventListener('click', function(e) {
-        //         if (modifyForm) {
-        //             modifyForm.style.display = 'none';
-        //             modifyServiceTitle.textContent = '';
-        //             modifyServiceDescription.textContent = '';
-        //         }
-        //     })
-        // });
         modalBtnClose(closeButton, modifyForm);
 
         // Add Service Button and Close Button
@@ -207,22 +204,15 @@ if (adminPage) {
         })
 
         modalBtnClose(closeButton, addForm);
-        // closeButton.forEach(button => {
-        //     button.addEventListener('click', function(e) {
-        //         if (addForm) {
-        //             addForm.style.display = 'none';
-        //             modifyServiceTitle.textContent = '';
-        //             modifyServiceDescription.textContent = '';
-        //         }
-        //     })
-        // });
 
-        applyChangeBtn.addEventListener('click', function(e) {
-
+        dashboardSideBar.addEventListener('click', function(e){
+            dashboardPanel.style.display = 'flex';
+            userPanel.style.display = 'none';
         })
 
-        userPanel.addEventListener('click', function(e) {
-            
+        userSideBar.addEventListener('click', function(e) {
+            dashboardPanel.style.display = 'none';
+            userPanel.style.display = "flex";
         })
     };
 }

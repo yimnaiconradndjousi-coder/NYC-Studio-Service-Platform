@@ -9,11 +9,9 @@
     <script src="../scripts/main.js" defer></script>
 </head>
 <body>
-    <!-- <div class="form-page">
 
-    </div> -->
     <section id="admin-panel">
-        <div id="sidebar">
+        <div class="sidebar">
             <div class="admin-user">
                 <div><img class="user-image" src="../icons/bot.webp" alt="admin user picture"></div>
 
@@ -23,35 +21,34 @@
                 </div>
             </div>
 
+            <!-- Sidebar Navigation -->
             <div class="sidebar-nav">
                 <p>Advailable Options</p>
                 <div class="sidebar-nav-container">
 
-                    <div class="sidebar-link">
+                    <div class="sidebar-link" id="welcome-sidebar">
                         <img class="sibebar-icon" src="/icons/dashboard.png" alt="dashboard icon">
-                        <p>Dashboard</p>
+                        <p>Welcome</p>
                     </div>
 
-                    <div class="sidebar-link" id="user-panel">
+                    <div class="sidebar-link" id="user-sidebar">
                         <img class="sibebar-icon" src="/icons/user.png" alt="users icon">
-                        <p>Users</p>
+                        <p>User</p>
                     </div>
 
-                    <div class="sidebar-link">
+                    <div class="sidebar-link" id="service-sidebar">
                         <img class="sibebar-icon" src="/icons/service.png" alt="service icon">
-                        <p>Services</p>
+                        <p>Service</p>
                     </div>
 
-                    <div class="sidebar-link">
-                        <img class="sibebar-icon" src="/icons/analytics.png" alt="analitics icon">
-                        <p>Analytics</p>
-                    </div>
                 </div>
             </div>
         </div>
 
-        <div id="dashboard">
+        <!-- Dashboard Navbar -->
+        <div class="dashboard-navbar">
             <div class="navbar">
+
                 <div class="navbar-left">
                     <span>Dashboard</span>
                 </div>
@@ -59,57 +56,108 @@
                 <div class="navbar-right">
                     <img class="nav-icon" src="../icons/notification.png" alt="notification icon">
                 </div>
+
             </div>
 
-            <div class="panel">
-                <div class="panel-information">
-                    <div class="panel-card">
-                        <div class="panel-info">
+            <!-- Main windows view for dynamic content -->
+            <div class="main-page-view" id="welcome-view">
+
+                <div class="main-view-analytics" id="view-analytics">
+
+                    <!-- view card left -->
+                    <div class="view-card">
+
+                        <div class="card-section">
                             <div class="welcome-msg">
                                 <p>Welcome</p>
                                 <span class="userName">Yimnai conrad</span>
                             </div>
                             
-                            <p>Number of services</p>
+                            <div>
+                                <p>Number of services: </p>
+                            </div>
                         </div>
-                        <div>
+
+                        <div class="card-section-2">
                             <p id="numServices">5</p>
                         </div>
+
                     </div>
 
-                    <div class="panel-card">
-                        <div class="panel-info">
-                            <p>Connection</p>
-                            <p>Last time connected</p>
+                    <!-- view card left -->
+                    <div class="view-card">
+
+                        <div class="card-section">
+                            <p>Connection time</p>
+                            <p>Last time connected: </p>
                         </div>
 
-                        <div>
+                        <div class="card-section-2">
                             <p id="last-time-connected">Yesterday</p>
                         </div>
                     </div>
+                    
                 </div>
 
+                <!-- Forms -->
+
+                <!-- Add serivce form for dynamic content -->
                 <div class="addservice-form">
+
+                    <!-- Close form button -->
                     <img class="close-btn"src="../icons/close-white.png" alt="close icon">
 
-                    <form action="">
+                    <form>
+                        <!-- Name -->
                         <label for="title">Service Name</label>
                         <input type="text" name="title" id="service-title" placeholder="Type the name of the E-service here">
                         <hr>
+
+                        <!-- Description -->
                         <label for="description">Service Description</label>
                         <textarea name="description" id="service-description" placeholder="Enter the E-service description here..."></textarea>
                         <hr>
-                        <button id="add-project-btn">Add Service</button>
+
+                        <!-- Add button -->
+                        <button id="add-btn">Add Service</button>
                     </form>
                 </div>
 
-                <div class="table-div">
-                    <div id="admin-table">
+                <!-- Modify serivce form for dynamic content -->
+                <div id="modify-form-container">
+
+                    <!-- Close form button -->
+                    <img class="close-btn"src="../icons/close-white.png" alt="">
+
+                    <form id="modification-form" action="">
+                        <!-- Name --> 
+                        <label for="title">Service Name</label>
+                        <textarea name="title" id="modify-service-title" placeholder="Type the name of the E-service here"></textarea>
+                        <hr>
+
+                        <!-- Description -->
+                        <label for="description">Service Description</label>
+                        <textarea name="description" id="modify-service-description" placeholder="Enter the E-service description here..."></textarea>
+                        <hr>
+
+                        <!-- action -->
+                        <div class="modification-buttons">
+                            <button id="apply-changes-btn">Apply</button>
+                            <button id="discard-changes-btn">Discard</button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="table-section">
+                    <div id="table-container">
                         <table>
+                            <!-- Table Caption or Title -->
                             <caption>
                                 <div class="caption-container">
-                                    <div class="caption-title">Services</div>
+                                    <div id="caption-title">Services</div>
                                     <div>
+                                        <!-- Add service modal form summoner -->
                                         <button id="add-service-btn">
                                             <div class="add-service-btn-container">
                                                 <img class="plus-icon" src="../icons/plus.png" alt=""> 
@@ -119,43 +167,26 @@
                                     </div>
                                 </div>
                             </caption>
+
+                            <!-- Table Header -->
                             <thead>
                                 <tr>
                                     <th>Name</th>
-                                    <th>Description</th>
+                                    <th id="role-or-description">Description</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
 
+                            <!-- Table Data or Entries -->
                             <tbody id="service-table">
-
                             </tbody>
 
                         </table>
                     </div>     
                 </div>
 
-
-                <div id="modify-form-container">
-                    <img class="close-btn"src="../icons/close-white.png" alt="">
-
-                    <form id="modification-form" action="">
-
-                        <label for="title">Service Name</label>
-                        <textarea name="title" id="modify-service-title" placeholder="Type the name of the E-service here"></textarea>
-                        <hr>
-                        <label for="description">Service Description</label>
-                        <textarea name="description" id="modify-service-description" placeholder="Enter the E-service description here..."></textarea>
-                        <hr>
-                        <div class="modification-buttons">
-                            <button id="apply-changes-btn">Apply</button>
-                            <button id="discard-changes-btn">Discard</button>
-                        </div>
-
-                    </form>
-                </div>
-
             </div>
+
         </div>
 
     </section>

@@ -19,15 +19,13 @@ body {
 }
 
 /* Admin */
-
 #admin-panel {
     display: flex;
     height: auto;
 }
 
-/* #Sidebar */
-
-#sidebar {
+/* Sidebar Navigation */
+.sidebar {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -74,10 +72,6 @@ body {
     gap: 15px;
 }
 
-/* * {
-    outline: 2px solid red;
-} */
-
 .sidebar-link {
     display: flex;
     align-items: center;
@@ -92,16 +86,19 @@ body {
     background-color: rgba(30, 100, 220, 0.5);
 }
 
-/* #Dashboard Section */
-
-.panel {
+/* Dashboard Section */
+.main-page-view {
     display: flex;
     flex-direction: column;
     gap: 25px;
     justify-content: center;
 }
 
-#dashboard {
+#welcome-view {
+    display: flex;
+}
+
+.dashboard-navbar {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -137,7 +134,7 @@ body {
     cursor: pointer;
 }
 
-.panel-information {
+.main-view-analytics {
     display: flex;
     justify-content: space-around;
     padding: 10px;
@@ -145,7 +142,7 @@ body {
     gap: 40px;
 }
 
-.panel-card {
+.view-card {
     display: flex;
     justify-content: space-between;
     width: 80%;
@@ -164,10 +161,15 @@ body {
     font-size: 1.25em;
 }
 
-.panel-info {
+.card-section {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.card-section-2 {
+    display: flex;
+    padding-top: 35px;
 }
 
 .welcome-msg {
@@ -176,8 +178,7 @@ body {
     font-size: 1.15em;
 }
 
-/* #Add Service Form */
-
+/* Add Service Form */
 .addservice-form {
     display: none;
     position: fixed;
@@ -189,7 +190,6 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(10, 10, 10, 0.899);
 }
-
 
 form {
     display: flex;
@@ -207,18 +207,6 @@ form {
 
 hr {
     margin-bottom: 10px;
-}
-
-#modify-service-title { 
-    font-size: 1.25em;
-    padding: 2px;
-    margin-bottom: 3px;
-    background: none;
-    border: none;
-    color: white;
-    height: 22px;
-    max-height: 23px;
-    scrollbar-width: none;
 }
 
 textarea {
@@ -242,14 +230,8 @@ label {
     margin-bottom: 12px;
 }
 
-
-/* #Service Table Display */
-
-/* * {
-    outline: 2px solid red;
-} */
-
-#admin-table {
+/* Table Display */
+#table-container {
     display: flex;
     width: 98%;
     padding: 12px;
@@ -261,7 +243,7 @@ label {
     align-items: center;
 }
 
-.table-div {
+.table-section {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -286,7 +268,7 @@ caption {
     align-items: center;
 }
 
-.caption-title {
+#caption-title {
     display: flex;
 }
 
@@ -294,16 +276,15 @@ caption {
     width: 24px;
 }
 
-.add-service-btn-container {
+.add-service-btn-container, .add-user-btn-container {
     display: flex;
     align-items: center;
     gap: 6px;
     padding: 1px;
     background-color: transparent;
-
 }
 
-#add-project-btn, #add-service-btn {
+#add-btn, #add-service-btn {
     font-size: var(--font-size);
     color: var(--primary-color);
     padding: 15px; 
@@ -317,7 +298,7 @@ caption {
     margin-bottom: 12px;
 }
 
-#add-service-btn {
+#add-service-btn, #add-user-btn {
     font-size: 0.54em;
     padding: 10px;
 }
@@ -408,6 +389,18 @@ tbody tr:hover {
     flex-direction: column;
     box-sizing: border-box;
     box-shadow: 0 0 20px rgba(10, 10, 10, 0.75);
+}
+
+#modify-service-title { 
+    font-size: 1.25em;
+    padding: 2px;
+    margin-bottom: 3px;
+    background: none;
+    border: none;
+    color: white;
+    height: 22px;
+    max-height: 23px;
+    scrollbar-width: none;
 }
 
 .close-btn {
