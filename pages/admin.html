@@ -26,19 +26,14 @@
                 <p>Advailable Options</p>
                 <div class="sidebar-nav-container">
 
-                    <div class="sidebar-link" id="welcome-sidebar">
+                    <div class="sidebar-link" id="service-sidebar">
                         <img class="sibebar-icon" src="/icons/dashboard.png" alt="dashboard icon">
-                        <p>Welcome</p>
+                        <p>Service</p>
                     </div>
 
                     <div class="sidebar-link" id="user-sidebar">
                         <img class="sibebar-icon" src="/icons/user.png" alt="users icon">
                         <p>User</p>
-                    </div>
-
-                    <div class="sidebar-link" id="service-sidebar">
-                        <img class="sibebar-icon" src="/icons/service.png" alt="service icon">
-                        <p>Service</p>
                     </div>
 
                 </div>
@@ -60,12 +55,12 @@
             </div>
 
             <!-- Main windows view for dynamic content -->
-            <div class="main-page-view" id="welcome-view">
+            <div class="main-page-view" id="service-view">
 
                 <div class="main-view-analytics" id="view-analytics">
 
                     <!-- view card left -->
-                    <div class="view-card">
+                    <div class="view-card" id="view-card-left">
 
                         <div class="card-section">
                             <div class="welcome-msg">
@@ -74,18 +69,18 @@
                             </div>
                             
                             <div>
-                                <p>Number of services: </p>
+                                <p>Number of <span id="number-service-or-user">services</span>: </p>
                             </div>
                         </div>
 
                         <div class="card-section-2">
-                            <p id="numServices">5</p>
+                            <p id="number-services">5</p>
                         </div>
 
                     </div>
 
                     <!-- view card left -->
-                    <div class="view-card">
+                    <div class="view-card" id="view-card-right">
 
                         <div class="card-section">
                             <p>Connection time</p>
@@ -102,24 +97,24 @@
                 <!-- Forms -->
 
                 <!-- Add serivce form for dynamic content -->
-                <div class="addservice-form">
+                <div class="add-form">
 
                     <!-- Close form button -->
                     <img class="close-btn"src="../icons/close-white.png" alt="close icon">
 
                     <form>
                         <!-- Name -->
-                        <label for="title">Service Name</label>
+                        <label for="title" class="name-label">Service Name</label>
                         <input type="text" name="title" id="service-title" placeholder="Type the name of the E-service here">
                         <hr>
 
                         <!-- Description -->
-                        <label for="description">Service Description</label>
+                        <label for="description" class="description-label">Service Description</label>
                         <textarea name="description" id="service-description" placeholder="Enter the E-service description here..."></textarea>
                         <hr>
 
                         <!-- Add button -->
-                        <button id="add-btn">Add Service</button>
+                        <button class="add-btn" id="form-add-btn">Add Service</button>
                     </form>
                 </div>
 
@@ -158,7 +153,7 @@
                                     <div id="caption-title">Services</div>
                                     <div>
                                         <!-- Add service modal form summoner -->
-                                        <button id="add-service-btn">
+                                        <button id="table-add-btn">
                                             <div class="add-service-btn-container">
                                                 <img class="plus-icon" src="../icons/plus.png" alt=""> 
                                                 <p>Add Service</p>
@@ -178,7 +173,7 @@
                             </thead>
 
                             <!-- Table Data or Entries -->
-                            <tbody id="service-table">
+                            <tbody id="table-data">
                             </tbody>
 
                         </table>

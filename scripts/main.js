@@ -1,55 +1,50 @@
+// Index Page Variables
 const heroTitle = document.getElementById('hero-section-title');
 const serviceContainer = document.querySelector("#services-card-container");
 const numReview = document.querySelector(".summary-review-info");
 const date = new Date();
 
-// Pages Variables
 
-
-// #Dashboard Variables
+// Admin Page Variables
 const adminPage = document.getElementById("admin-panel");
 const adminUserName = document.querySelectorAll(".userName");
+
 const addServiceTitle = document.getElementById('service-title');
 const addServiceDescription = document.getElementById('service-description');
 
 const tableContainer = document.getElementById("table-container");
-const serviceTable = document.getElementById("service-table");
+const serviceTable = document.getElementById("table-data");
+
+// Modal forms
 const modifyForm = document.getElementById("modify-form-container");
-const addForm = document.querySelector('.addservice-form');
+const addForm = document.querySelector('.add-form');
+
 const lastTimeConnected = document.getElementById("last-time-connected");
 
 // Sidebar Links 
 const dashboardSideBar = document.getElementById('dashboard-sidebar');
 const userSideBar = document.getElementById('user-sidebar');
 
-// Panel
+// Dashboard Analytics
 const dashboardPanel = document.getElementById('dashboard-panel');
 const userPanel = document.getElementById('user-table');
-
-let numServices = document.getElementById("numServices");
+let numServices = document.getElementById("number-services");
 let services = 0;
 
 // Button
-const addServiceButton = document.getElementById('add-btn');
+const addButton = document.getElementById('form-add-btn');
+const tableAddButton = document.getElementById('table-add-btn');
 const closeButton = document.querySelectorAll(".close-btn");
+
 const applyChangeBtn = document.getElementById("apply-changes-btn");
 const discardChangeBtn = document.getElementById("discard-changes-btn");
-const addServiceBtn = document.getElementById("add-service-btn");
-
-const addUserButton = document.getElementById('add-user-btn');
-// Login and Signup Variables
-
-
-// Home Page Variables
-
 
                     // --- ADMIN PAGE LOGIC---
-
 if (adminPage) {
 
     // add service button
-    if (addServiceButton) {
-        addServiceButton.addEventListener('click', function(e) {
+    if (addButton) {
+        addButton.addEventListener('click', function(e) {
             e.preventDefault();
             
             // Create an object for the new service
@@ -144,6 +139,7 @@ if (adminPage) {
         serviceTable.appendChild(serviceCard);
         });
 
+        // Delete Button Logic
         const deleteButtons = document.querySelectorAll(".delete-btn");
 
         deleteButtons.forEach((button, index) => {
@@ -173,6 +169,7 @@ if (adminPage) {
                     modifyServiceDescription.textContent = savedServices[index].description;
                     console.log(savedServices[index].title);
 
+                    // Apply Changes for modal form
                     applyChangeBtn.addEventListener('click', function(e) {
 
                         savedServices[index].title = modifyServiceTitle.value;
@@ -184,36 +181,41 @@ if (adminPage) {
             })
         });
 
+        // Modal Close Button Logic
         function modalBtnClose(btn, form) {
-            btn.forEach(button => {
-                button.addEventListener('click', function(e) {
+            function modalCloseStyling() {
+                        return form.style.display = 'none', modifyServiceTitle.textContent = '', modifyServiceDescription.textContent = '';
+            }
+
+            if (btn == discardChangeBtn) {
+                btn.addEventListener('click', function(e) {
                     if (form) {
-                        form.style.display = 'none';
-                        modifyServiceTitle.textContent = '';
-                        modifyServiceDescription.textContent = '';
+                        modalCloseStyling()
                     }
                 })
-            })     
+            } else {
+                btn.forEach(button => {
+                    button.addEventListener('click', function(e) {
+                        if (form) {
+                            modalCloseStyling()
+                        }
+                    })
+                }) 
+            }
         }
-
+        
+        // Modal Close Function Call
         modalBtnClose(closeButton, modifyForm);
+        modalBtnClose(closeButton, addForm);
+
+        // Discharge changes Funtion call through modalBtnClose
+        modalBtnClose(discardChangeBtn, modifyForm);
 
         // Add Service Button and Close Button
-        addServiceBtn.addEventListener('click', function(e) {
+        tableAddButton.addEventListener('click', function(e) {
             addForm.style.display = 'flex';
         })
 
-        modalBtnClose(closeButton, addForm);
-
-        dashboardSideBar.addEventListener('click', function(e){
-            dashboardPanel.style.display = 'flex';
-            userPanel.style.display = 'none';
-        })
-
-        userSideBar.addEventListener('click', function(e) {
-            dashboardPanel.style.display = 'none';
-            userPanel.style.display = "flex";
-        })
     };
 }
 
@@ -236,6 +238,7 @@ if (heroTitle) {
 }
  
 // --- LOAD SAVED SERVICES ON HOME PAGE ---
+
 if (serviceContainer) {
     const savedServices = JSON.parse(localStorage.getItem('myServices')) || [];
     
@@ -245,9 +248,7 @@ if (serviceContainer) {
         serviceCard.innerHTML = `<h2>${service.title}</h2><div class="service-card-description"><p>${service.description}</p></div>`;
         serviceContainer.appendChild(serviceCard);
     });
-    // localStorage.removeItem('myServices');
     console.log(savedServices);
 }
 
-                    // --- HOME PAGE LOGIC ---
 

@@ -80,6 +80,7 @@ body {
     font-size: 1.2em;
     font-weight: 600;
     transition: all 0.2s ease;
+    cursor: pointer;
 }
 
 .sidebar-link:hover {
@@ -179,7 +180,7 @@ body {
 }
 
 /* Add Service Form */
-.addservice-form {
+.add-form {
     display: none;
     position: fixed;
     top: 17%;
@@ -231,6 +232,13 @@ label {
 }
 
 /* Table Display */
+.table-section {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
 #table-container {
     display: flex;
     width: 98%;
@@ -239,13 +247,6 @@ label {
     box-shadow: 0 0 20px rgba(10, 10, 10, 0.734);
     border-radius: 12px;
     background-color: #181A1E;
-    justify-content: center;
-    align-items: center;
-}
-
-.table-section {
-    display: flex;
-    width: 100%;
     justify-content: center;
     align-items: center;
 }
@@ -284,7 +285,7 @@ caption {
     background-color: transparent;
 }
 
-#add-btn, #add-service-btn {
+.add-btn, #table-add-btn {
     font-size: var(--font-size);
     color: var(--primary-color);
     padding: 15px; 
@@ -298,7 +299,7 @@ caption {
     margin-bottom: 12px;
 }
 
-#add-service-btn, #add-user-btn {
+#table-add-btn {
     font-size: 0.54em;
     padding: 10px;
 }
@@ -356,7 +357,6 @@ tbody tr:hover {
 .delete-btn {
     background-color:#ff00008a;
     transition: all 0.2s ease;
-
 }
 
 .modify-btn:hover, .delete-btn:hover {
@@ -374,8 +374,7 @@ tbody tr:hover {
     background-color: transparent;
 }
 
-/* #Modification Form */
-
+/* Modification Form */
 #modify-form-container {
     width: 32%;
     background-color: #181A1E;
