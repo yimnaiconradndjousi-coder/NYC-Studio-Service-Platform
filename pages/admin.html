@@ -97,20 +97,20 @@
                 <!-- Forms -->
 
                 <!-- Add serivce form for dynamic content -->
-                <div class="add-form">
+                <div class="add-form-container">
 
                     <!-- Close form button -->
                     <img class="close-btn"src="../icons/close-white.png" alt="close icon">
 
-                    <form>
+                    <form id="addition-form">
                         <!-- Name -->
                         <label for="title" class="name-label">Service Name</label>
-                        <input type="text" name="title" id="service-title" placeholder="Type the name of the E-service here">
+                        <input type="text" name="title" id="add-form-input" placeholder="Type the name of the E-service here">
                         <hr>
 
                         <!-- Description -->
                         <label for="description" class="description-label">Service Description</label>
-                        <textarea name="description" id="service-description" placeholder="Enter the E-service description here..."></textarea>
+                        <textarea name="description" id="add-form-textarea" placeholder="Enter the E-service description here..."></textarea>
                         <hr>
 
                         <!-- Add button -->
@@ -124,14 +124,14 @@
                     <!-- Close form button -->
                     <img class="close-btn"src="../icons/close-white.png" alt="">
 
-                    <form id="modification-form" action="">
+                    <form id="modification-form">
                         <!-- Name --> 
-                        <label for="title">Service Name</label>
+                        <label for="title" class="name-label">Service Name</label>
                         <textarea name="title" id="modify-service-title" placeholder="Type the name of the E-service here"></textarea>
                         <hr>
 
                         <!-- Description -->
-                        <label for="description">Service Description</label>
+                        <label for="description" class="description-label">Service Description</label>
                         <textarea name="description" id="modify-service-description" placeholder="Enter the E-service description here..."></textarea>
                         <hr>
 
@@ -154,7 +154,7 @@
                                     <div>
                                         <!-- Add service modal form summoner -->
                                         <button id="table-add-btn">
-                                            <div class="add-service-btn-container">
+                                            <div class="add-btn-container">
                                                 <img class="plus-icon" src="../icons/plus.png" alt=""> 
                                                 <p>Add Service</p>
                                             </div>

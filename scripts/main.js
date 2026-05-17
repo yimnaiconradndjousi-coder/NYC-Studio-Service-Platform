@@ -9,15 +9,16 @@ const date = new Date();
 const adminPage = document.getElementById("admin-panel");
 const adminUserName = document.querySelectorAll(".userName");
 
-const addServiceTitle = document.getElementById('service-title');
-const addServiceDescription = document.getElementById('service-description');
+
+const addServiceTitle = document.getElementById('add-form-input');
+const addServiceDescription = document.getElementById('add-form-textarea');
 
 const tableContainer = document.getElementById("table-container");
 const serviceTable = document.getElementById("table-data");
 
 // Modal forms
 const modifyForm = document.getElementById("modify-form-container");
-const addForm = document.querySelector('.add-form');
+const addForm = document.querySelector('.add-form-container');
 
 const lastTimeConnected = document.getElementById("last-time-connected");
 
@@ -38,6 +39,7 @@ const closeButton = document.querySelectorAll(".close-btn");
 
 const applyChangeBtn = document.getElementById("apply-changes-btn");
 const discardChangeBtn = document.getElementById("discard-changes-btn");
+
 
                     // --- ADMIN PAGE LOGIC---
 if (adminPage) {
@@ -113,11 +115,16 @@ if (adminPage) {
             };
             
         });
-
     }
 
     // Admin Service Table Logic
     if (tableContainer) {
+
+        // Variables
+        const deleteButtons = document.querySelectorAll(".delete-btn");
+        const modifyButton = document.querySelectorAll(".modify-btn");
+        const modifyServiceTitle = document.getElementById("modify-service-title");
+        const modifyServiceDescription = document.getElementById("modify-service-description");
         const savedServices = JSON.parse(localStorage.getItem('myServices')) || [];
         
         savedServices.forEach(service => {
@@ -140,7 +147,6 @@ if (adminPage) {
         });
 
         // Delete Button Logic
-        const deleteButtons = document.querySelectorAll(".delete-btn");
 
         deleteButtons.forEach((button, index) => {
             button.addEventListener('click', function(e) {
@@ -154,10 +160,6 @@ if (adminPage) {
         });
         
         // Modification Button Logic
-        const modifyButton = document.querySelectorAll(".modify-btn");
-        let modifyServiceTitle = document.getElementById("modify-service-title");
-        let modifyServiceDescription = document.getElementById("modify-service-description");
-
         modifyButton.forEach((button, index) => {
             button.addEventListener('click',function(e) {
                 e.preventDefault();
@@ -184,7 +186,7 @@ if (adminPage) {
         // Modal Close Button Logic
         function modalBtnClose(btn, form) {
             function modalCloseStyling() {
-                        return form.style.display = 'none', modifyServiceTitle.textContent = '', modifyServiceDescription.textContent = '';
+                return form.style.display = 'none', modifyServiceTitle.textContent = '', modifyServiceDescription.textContent = '';
             }
 
             if (btn == discardChangeBtn) {
