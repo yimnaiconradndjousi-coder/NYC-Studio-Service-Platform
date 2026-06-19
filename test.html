@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="usertype">User Type</label>
+    <select name="usertype" id="select-user-type">
+        <option value="normal-user">Normal User</option>
+        <option value="admin-user">Admin User</option>
+    </select>
+
+    <script>
+        const select = document.getElementById("select-user-type");
+        select.addEventListener("change", (event) => {
+            const chosenValue = event.target.value;
+
+            console.log(chosenValue)
+        })
+        
+    </script>
+
+</body>
+</html>

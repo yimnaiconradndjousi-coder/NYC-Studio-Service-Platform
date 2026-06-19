@@ -25,25 +25,26 @@
             <div class="sidebar-nav">
                 <p>Advailable Options</p>
                 <div class="sidebar-nav-container">
-
-                    <div class="sidebar-link" id="service-sidebar">
-                        <img class="sibebar-icon" src="/icons/dashboard.png" alt="dashboard icon">
-                        <p>Service</p>
+                    <div class="sideBar">
+                        <div class="sidebar-link" id="service-sidebar">
+                            <img class="sibebar-icon" src="/icons/dashboard.png" alt="dashboard icon">
+                            <p>Service</p>
+                        </div>
                     </div>
 
-                    <div class="sidebar-link" id="user-sidebar">
-                        <img class="sibebar-icon" src="/icons/user.png" alt="users icon">
-                        <p>User</p>
+                    <div class="sideBar">
+                        <div class="sidebar-link" id="user-sidebar">
+                            <img class="sibebar-icon" src="/icons/user.png" alt="users icon">
+                            <p>User</p>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
 
         <!-- Dashboard Navbar -->
-        <div class="dashboard-navbar">
-            <div class="navbar">
-
+        <div class="dashboard">
+            <div id="navbar">
                 <div class="navbar-left">
                     <span>Dashboard</span>
                 </div>
@@ -51,7 +52,6 @@
                 <div class="navbar-right">
                     <img class="nav-icon" src="../icons/notification.png" alt="notification icon">
                 </div>
-
             </div>
 
             <!-- Main windows view for dynamic content -->
@@ -60,28 +60,25 @@
                 <div class="main-view-analytics" id="view-analytics">
 
                     <!-- view card left -->
-                    <div class="view-card" id="view-card-left">
-
+                    <div class="view-card" >
                         <div class="card-section">
                             <div class="welcome-msg">
                                 <p>Welcome</p>
-                                <span class="userName">Yimnai conrad</span>
+                                <span id="userName">Yimnai conrad</span>
                             </div>
                             
                             <div>
-                                <p>Number of <span id="number-service-or-user">services</span>: </p>
+                                <p>Number of <span id="name-of-entity">services</span>: </p>
                             </div>
                         </div>
 
                         <div class="card-section-2">
-                            <p id="number-services">5</p>
+                            <p id="number-of-entity">5</p>
                         </div>
-
                     </div>
 
                     <!-- view card left -->
-                    <div class="view-card" id="view-card-right">
-
+                    <div class="view-card">
                         <div class="card-section">
                             <p>Connection time</p>
                             <p>Last time connected: </p>
@@ -98,21 +95,32 @@
 
                 <!-- Add serivce form for dynamic content -->
                 <div class="add-form-container">
-
                     <!-- Close form button -->
                     <img class="close-btn"src="../icons/close-white.png" alt="close icon">
 
                     <form id="addition-form">
                         <!-- Name -->
-                        <label for="title" class="name-label">Service Name</label>
+                        <label for="title" class="label" id="add-form-name-label">Service Name</label>
                         <input type="text" name="title" id="add-form-input" placeholder="Type the name of the E-service here">
                         <hr>
 
-                        <!-- Description -->
-                        <label for="description" class="description-label">Service Description</label>
-                        <textarea name="description" id="add-form-textarea" placeholder="Enter the E-service description here..."></textarea>
-                        <hr>
+                        <div id="for-user-form-input">
+                            <label for="email" class="description-label">User Email</label>
+                            <input type="email" name="email" id="add-form-email" placeholder="Enter the user's email"></input>
+                            <hr>
 
+                            <label for="usertype">User Type</label>
+                            <select name="usertype" id="select-user-type">
+                                <option value="normal-user">Normal User</option>
+                                <option value="admin-user">Admin User</option>
+                            </select>
+                        </div>
+                        <!-- Description -->
+                        <div id="for-service-form-input">
+                            <label for="description" class="description-label">Service Description</label>
+                            <textarea name="description" id="add-form-textarea" placeholder="Enter the E-service description here..."></textarea>
+                            <hr>
+                        </div>
                         <!-- Add button -->
                         <button class="add-btn" id="form-add-btn">Add Service</button>
                     </form>
@@ -120,27 +128,23 @@
 
                 <!-- Modify serivce form for dynamic content -->
                 <div id="modify-form-container">
-
                     <!-- Close form button -->
                     <img class="close-btn"src="../icons/close-white.png" alt="">
 
                     <form id="modification-form">
                         <!-- Name --> 
-                        <label for="title" class="name-label">Service Name</label>
+                        <label for="title" class="name-label" id="modify-form-name-label">Service Name</label>
                         <textarea name="title" id="modify-form-input" placeholder="Type the name of the E-service here"></textarea>
                         <hr>
-
                         <!-- Description -->
                         <label for="description" class="description-label">Service Description</label>
                         <textarea name="description" id="modify-form-textarea" placeholder="Enter the E-service description here..."></textarea>
                         <hr>
-
                         <!-- action -->
                         <div class="modification-buttons">
                             <button id="apply-changes-btn">Apply</button>
                             <button id="discard-changes-btn">Discard</button>
                         </div>
-
                     </form>
                 </div>
 
@@ -156,7 +160,7 @@
                                         <button id="table-add-btn">
                                             <div class="add-btn-container">
                                                 <img class="plus-icon" src="../icons/plus.png" alt=""> 
-                                                <p>Add Service</p>
+                                                <p>Add <span id="add-btn-container-text">Service</span></p>
                                             </div>
                                         </button>
                                     </div>
@@ -167,7 +171,7 @@
                             <thead>
                                 <tr>
                                     <th>Name</th>
-                                    <th id="role-or-description">Description</th>
+                                    <th id="entity-role-or-description">Description</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -187,3 +191,4 @@
     </section>
 </body>
 </html>
+

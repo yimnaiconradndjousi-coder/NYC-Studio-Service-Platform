@@ -1,4 +1,3 @@
-// Login Variables
 const loginForm = document.querySelector(".login-form");
 const loginBtn = document.getElementById('login-btn');
 const showOrHidePassword = document.getElementById('show-or-hide-password');
@@ -10,12 +9,8 @@ const usernameError = document.getElementById('username-error');
 const emailError = document.getElementById('email-error');
 const hr = document.querySelector('.hr');
 const date = new Date();
-
-// SignUp Variables
 const signupForm = document.querySelector('.signup-form');
 const signupBtn = document.getElementById('signup-btn');
-
-// Common Variables 
 const userList = JSON.parse(localStorage.getItem('Users')) || [];
 
 
@@ -182,12 +177,4 @@ if (signupForm) {
         window.location.href = 'home.html';
     });
 
-}
-
-// Shared Form Logic
-if (loginForm || signupForm) {
-
-
-    
-    
 }
