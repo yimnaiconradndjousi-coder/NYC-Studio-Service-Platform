@@ -500,7 +500,7 @@ h1{
     font-size: 1.25rem;
 }
 
-                        /* #SERVICE.HTML PAGES */
+/* #SERVICE.HTML PAGES */
 
 .service-section-page-h {
     margin-top: 100px;
@@ -514,13 +514,13 @@ h1{
 footer {
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 75px;
     padding-top: 25px;
-    padding-bottom: 0;
+    padding-bottom: 50px;
     background-color: var(--bg-color);
     color: white;
+    flex-wrap: wrap;
     justify-content: center;
-    /* align-items: center; */
 }
 
 .footer-content {
@@ -536,8 +536,9 @@ footer {
 }
 
 .conclusion p{
+
     font-size: 1.5rem;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-weight: 600;
 }
 
@@ -563,7 +564,8 @@ footer {
 }
 
 .footer-links-container h1{
-    font-size: 1.3em;
+    font-size: 1.5em;
+    color: rgb(30, 115, 220);
 }
 
 .foot-link-div ul{
@@ -596,17 +598,14 @@ footer {
     color: rgb(30, 115, 220);
 }
 
-.foot-nav:hover {
-    list-style: disc;
-}
-
 .footer-extra {
     display: flex;
     flex-direction: column;
 }
 
 .footer-extra h1{
-    font-size: 1.3em;
+    font-size: 1.5em;
+    color: rgb(30, 115, 220);
 }
 
 .contact-information {
